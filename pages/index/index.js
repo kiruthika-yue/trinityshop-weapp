@@ -1,11 +1,19 @@
 import create from '../../utils/create'
 import store from '../../store/index'
-import { GetItemList } from '../../service/api/goods.js'
+import { GetItemList, BannerPic } from '../../service/api/goods.js'
 
 //获取应用实例
 const app = getApp()
 
 create.Page(store, {
+  data:{
+    duration:"",
+    imgUrls:[
+      {url:"../../assets/images/alipay.png"},
+      {url: "../../assets/images/wechat.png"},
+      {url: "../../assets/images/user.png"}
+    ]
+  },
   use: [
     'motto',
     'userInfo',
@@ -19,19 +27,32 @@ create.Page(store, {
     }
   },
   //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
+  switchList: function (n) {
+    console.log(n)
+    this.setData({
+      buttonsSelect: n
     })
+
   },
   onLoad: function () {
+    
 
     // 测试接口调用
-    GetItemList({}).then(res=> {
-      console.log(res)
+    // GetItemList({}).then(res=> {
+    //   console.log(res)
+    // })
+    BannerPic({ "device_num":"jhceshi001"}).then(res => {
+      console.log("res:",res)
+      var imgInfo = res.data;
+      var picsPath = imgInfo.pics;
+      
+      console.log("picsPath", picsPath)
+      this.setData({
+        duration: imgInfo.duration,
+        // imgUrls: imgInfo.pics
+      })
     })
-
-
+    
     if (app.globalData.userInfo) {
       this.store.data.userInfo = app.globalData.userInfo
       this.store.data.hasUserInfo = true

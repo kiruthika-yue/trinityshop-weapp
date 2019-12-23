@@ -1,6 +1,9 @@
 <!--logs.wxml-->
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="log" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+  <!-- <block wx:for="{{logs}}" wx:key="log" wx:for-item="log"> -->
+     <!--提示部分 -->
+    <view class="prompt">
+       <text decode="{{true}}">&emsp;&emsp;请在hour内完成支付，否则订单自动取消。</text> 
+    </view>
+  <!-- </block> -->
 </view>

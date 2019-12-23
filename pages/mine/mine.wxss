@@ -1,0 +1,11 @@
+.container log-list{
+  background-color: #fff;
+}
+
+.background {
+  width: 100%;
+  height: 40%;
+  position:fixed;  
+  background-size:100% 100%;
+  z-index: -1;
+}

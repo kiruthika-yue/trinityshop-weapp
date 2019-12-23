@@ -5,6 +5,7 @@ function request(options) {
     wx.request({
       url: baseURL + options.url,
       timeout: timeout,
+      method:options.method,
       data: options.data,
       success: function (res) {
         resolve(res.data)

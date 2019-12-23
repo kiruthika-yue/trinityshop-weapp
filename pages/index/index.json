@@ -1,4 +1,8 @@
 {
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ccc",
+  "navigationBarTitleText": "售卖机",
+  "navigationBarTextStyle": "black",
   "usingComponents": {
     "test-store": "/components/test-store/test-store"
   }

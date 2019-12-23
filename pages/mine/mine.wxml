@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <!-- <block wx:for="{{logs}}" wx:key="log" wx:for-item="log"> -->
+    <!--个人logo及name -->
+    <view class="personInfo">
+      <view class='logoPic'>
+          <image class='background' src='../../assets/images/user-home-bg.png'>
+          </image>
+      </view>
+    </view>
+  <!-- </block> -->
+</view>

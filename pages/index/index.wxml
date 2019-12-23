@@ -1,14 +1,30 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}-{{reverseMotto}}-{{newProp}}</text>
-  </view>
-  <test-store />
+    <!--提示部分 -->
+    <view class="prompt">
+        <text decode="{{true}}">&emsp;&emsp;提示：若商品与货架展示不符请勿购买</text> 
+    </view>
+    <!--轮播图-->
+      <view class="swiper">  
+      <swiper autoplay="true" duration="{{duration}}" interval="3000">
+            <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+            <swiper-item>
+              <image class="img1" src="{{item.url}}" mode="widthFix"/>
+            </swiper-item>
+           </block> 
+      </swiper>
+      </view> 
+      <!--商品列表按钮项  -->
+      <view class="menu-box">
+                <view class="menu">
+                    <view class = "buttons-con">
+                        <button bindtap="switchList(0)">查看全部</button>
+                        <button bindtap="switchList(1)">仅看有货</button>
+                    </view>
+                    <view class = "right-con">
+                        <button bindtap="switchToTileMachineList"></button>
+                    </view>
+                </view>
+            </view>
+   <!-- <test-store />  -->
 </view>

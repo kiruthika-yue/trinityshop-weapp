@@ -1,0 +1,4 @@
+<!--pages/btn/btn.wxml-->
+ <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" class="zan-btn zan-btn--primary">授权登录</button>
+    <button bindtap='navigateBack' class="zan-btn">返回首页</button>
+

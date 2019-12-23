@@ -1,13 +1,41 @@
 {
   "pages": [
-		"pages/index/index",
-    "pages/logs/logs"
+	"pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/authorize/authorize",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "blue",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "./assets/images/home.png",
+        "iconPath": "./assets/images/homeline.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "./assets/images/gouwuche.png",
+        "iconPath": "./assets/images/gouwucheline.png",
+        "pagePath": "pages/logs/logs",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "./assets/images/yonghu.png",
+        "iconPath": "./assets/images/yonghuline.png",
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

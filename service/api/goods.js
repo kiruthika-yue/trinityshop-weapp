@@ -20,3 +20,14 @@ export const CustomerAction = (data) => {
     data
   })
 }
+
+/**
+ * 轮播图
+ */
+export const BannerPic = (data) => {
+  return request({
+    url: 'trinity-customer/customer/banner_pic',
+    method: 'post',
+    data
+  })
+}

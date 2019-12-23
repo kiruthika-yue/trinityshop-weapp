@@ -1,21 +1,114 @@
 /**index.wxss**/
-.userinfo {
+/* 提示部分 */
+.prompt{
+	width: 100%;
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 26rpx;
+	color: #666869;
+	border: solid 1rpx #89abcf;
+	background-color:#e9f5fb;
+}
+
+/* 轮播图 */	
+.swiper image{
+	width: 100%;
+	height: 100%;
+}
+
+.navigator-hover {
+  color:blue;
+}
+.other-navigator-hover {
+  color:red;
+}
+
+.swiper img{
+  width: 100%;
+  height: 100%;
+}
+
+.menu-box{
+  width: 100%;
+  height:40%; 
+  border: solid 1px red; 
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.menu{
+  border-bottom:1px solid rgba(222,222,222,1);
+  width: 100%;
+  height:80rpx;
+  flex: 0 0 auto;
+  background:rgba(255,255,255,1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  line-height: 80rpx;
+  transition: border-radius 0.1s ease-in;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+.menu button {
+  outline: none;
+  border :none;
+  background: #fff;
+}
+
+.buttons-con{
+  width : 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.buttons-con button {
+  width : 40%;
+  height: 100%;
+  font-size:30rpx;
+  color:rgba(74,74,74,1);
+  background-color: transparent;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.buttons-con button:active{
+  background-color: #f4f4f4;
 }
-
-.usermotto {
-  margin-top: 200px;
+.buttons-con .selected {
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(72,168,218,1)
 }
+        
+.right-con{
+  width : 25%;
+  height: 66rpx;
+  border-left:1px solid rgba(216,216,216,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.right-con button {
+  width : 40rpx;
+  height: 50rpx;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* @include background-bg('../../assets/images/kapian'); */
+  /* &.right-con-grid{
+      @include background-bg('../../assets/images/switch')
+  } */
+/* } */
+ } 
+       
+ .buttons-con,.right-con{
+  float: left; 
+} 
+    
